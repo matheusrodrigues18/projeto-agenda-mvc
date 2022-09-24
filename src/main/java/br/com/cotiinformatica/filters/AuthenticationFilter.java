@@ -60,10 +60,12 @@ public class AuthenticationFilter implements Filter {
 				//redirecionar para pag:: login
 				res.sendRedirect("/projetoWeb01/");
 			}
-		}
+		}else{
 		
 		// pass the request along the filter chain
 		chain.doFilter(request, response);
+			
+		}
 	}
 
 	/**
