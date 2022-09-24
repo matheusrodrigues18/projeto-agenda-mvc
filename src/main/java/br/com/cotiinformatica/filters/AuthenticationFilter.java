@@ -59,6 +59,10 @@ public class AuthenticationFilter implements Filter {
 			if(req.getSession().getAttribute("usuario")==null) {
 				//redirecionar para pag:: login
 				res.sendRedirect("/projetoWeb01/");
+			}else{
+				
+			chain.doFilter(request, response);
+				
 			}
 		}else{
 		
